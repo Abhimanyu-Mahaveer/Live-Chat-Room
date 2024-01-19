@@ -1,0 +1,209 @@
+/* Common Styles */
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg, #5D54A4, #7C78B8) ;		
+	position: absolute;	
+	
+	box-shadow: 0px 0px 24px #5C5696;
+    position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 0;
+	-webkit-clip-path: inset(0 0 0 0);
+	clip-path: inset(0 0 0 0);	
+}
+
+label {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #000000; /* Change the color to your desired value */
+    margin-bottom: 5px; /* Adjust the bottom margin for spacing */
+    transition: color 0.3s ease-in-out; /* Add a smooth color transition effect */
+}
+label:hover {
+    box-shadow: inset 100px 0 0 0 #7168b4;
+    color: white;
+}
+
+/* Form Styles */
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.join {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.create-btn {
+    width: 100%;
+    padding: 15px; /* Increase padding for larger buttons */
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Add transition for smooth hover effect */
+}
+
+.join-btn {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: white;
+    background-color: #456f3d;
+    padding: 1em 2em;
+    border: none;
+    border-radius: .6rem;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.join-btn span {
+    position: relative;
+    z-index: 1;
+    transition: color 0.4s;
+}
+
+.join-btn::before {
+    content: "Join the room";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.join-btn::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.join-btn::before,
+.join-btn::after {
+    background: #000000;
+    width: 120%;
+    left: -10%;
+    
+    transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+
+.join-btn:hover .span {
+    color: black;
+}
+
+.join-btn:hover::before {
+    transform: translate3d(100%, 0, 0);
+}
+   
+    
+ 
+
+/* Hover effect for buttons */
+.create-btn:hover {
+    background-color: #45a049;
+}
+
+/* Chat Room Styles */
+.message-box {
+    border: 2px solid #4CAF50;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+    height: 90vh; /* Adjust the height of the message box */
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    align-items: stretch;
+    margin: 20px;
+    overflow: auto; /* Add overflow property for scrolling */
+}
+.message{
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+.messages {
+    overflow-y: scroll;
+    flex: 1;
+    width: 100%;
+}
+
+.inputs {
+    padding: 10px;
+    display: flex;
+    background-color: #f1f1f1;
+}
+
+h2 {
+    text-align: center;
+    font-size: 24px; /* Increase font size for "Enter a chat room" text */
+    margin-bottom: 15px; /* Add margin for better spacing */
+}
+
+#message {
+    flex: 1;
+    margin-right: 10px;
+    padding: 8px; /* Adjust the padding for the input field */
+}
+
+
+
+h3 {font-size: 20px;
+    font-weight: 600;
+    color: #fdfdfe;
+    text-shadow: 0px 0px 5px #b393d3, 0px 0px 10px #b393d3, 0px 0px 10px #b393d3,
+      0px 0px 20px #b393d3;
+}
+
+.muted {
+    font-size: 10px;
+    color: darkgray;
+}
+#send-btn {
+    padding: 10px 15px; /* Adjust padding for the send button */
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out; /* Add a smooth background color transition effect */
+}
+
+/* Hover effect for the send button */
+#send-btn:hover {
+    background-color: #45a049;
+}
+.text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+
+/* Error Message Styles */
+.error {
+    color: darkred;
+    margin-top: 5px;
+}
